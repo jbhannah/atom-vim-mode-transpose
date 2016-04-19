@@ -1,14 +1,14 @@
 {
   "name": "vim-mode-transpose",
   "main": "./lib/vim-mode-transpose",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "1.0.0",
+  "description": "Transpose characters with one command in vim-mode",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "vim-mode-transpose:toggle"
+    "atom-workspace": "vim-mode-transpose:transpose"
   },
-  "repository": "https://github.com/atom/vim-mode-transpose",
+  "repository": "https://github.com/jbhannah/vim-mode-transpose",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
