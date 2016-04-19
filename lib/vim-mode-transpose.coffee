@@ -15,6 +15,8 @@ module.exports = VimModeTranspose =
   transpose: ->
     editor = atom.workspace.getActiveTextEditor()
     for p in editor.getCursorBufferPositions()
-      current = editor.getTextInBufferRange([p, p.traverse([0, 1])])
-      next = editor.getTextInBufferRange([p.traverse([0, 1]), p.traverse([0, 2])])
-      editor.setTextInBufferRange([p, p.traverse([0, 2])], next + current)
+      q = p.traverse([0, 1])
+      r = p.traverse([0, 2])
+      current = editor.getTextInBufferRange([p, q])
+      next = editor.getTextInBufferRange([q, r])
+      editor.setTextInBufferRange([p, r], next + current)
